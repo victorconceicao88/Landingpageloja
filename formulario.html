@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hero&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lucia Decor - Cortinados Sob Medida</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="segunda">
+      <div class="primeira">
+        <div class="container">
+          <!-- Logo centralizado no formulário -->
+          <div class="form-container">
+            <h2 class="titulo">Solicite o Seu Orçamento:</h2>
+            <form
+              id="orcamentoForm"
+              method="post"
+              action="https://script.google.com/macros/s/AKfycby65-G9Fn94AShdLyGI83EfiEsOECgOPaLbjZkdqN2zNWmW_VgnOowu_YBcYHpC998p/exec"
+              name="contact.form"
+            >
+              <div class="inputs-wrapper">
+                <div class="form-group">
+                  <label for="tipo-confecao">Tipo de Confecção:</label>
+                  <select id="tipo-confecao" name="Tipo de Confecção:" required>
+                    <option value="onda">----</option>
+                    <option value="onda">Onda</option>
+                    <option value="franzido">Franzido</option>
+                    <option value="moderno">Moderno</option>
+                    <option value="pregas">Pregas</option>
+                    <option value="nao-está-aqui">Não está aqui</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="medidas"
+                    name="medidas"
+                    required
+                    placeholder="Medidas:"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    placeholder="Nome:"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="localidade"
+                    name="localidade"
+                    required
+                    placeholder="Localidade:"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    id="contacto"
+                    name="contacto"
+                    required
+                    placeholder="Contacto:"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+            <!-- Div para exibir a mensagem de sucesso -->
+            <div
+              id="confirmationMessage"
+              style="
+                display: none;
+                background-color: lightgreen;
+                color: black;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 5px;
+              "
+            >
+              Dados enviados com sucesso! Entraremos em contacto em breve.
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Adicionando os ícones sociais e o logo da loja no final -->
+       <!-- Logo da loja -->
+       <div class="logo">
+        <img src="3.png" alt="Logo Lucia Decor" class="logo-img" />
+      </div>
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="instagram (1).svg" alt="">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="facebook.svg" alt="">
+        </a>
+      </div>
+   
+    </footer>
+    </div>
+
+    <!-- Inclusão do código JavaScript -->
+    <script>
+      document
+        .getElementById("orcamentoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Previne o envio padrão do formulário para capturar a resposta
+
+          const formData = new FormData(this); // Captura os dados do formulário
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json()) // Processa a resposta como JSON
+            .then((data) => {
+              if (data.result === "Success") {
+                // Exibe a mensagem de sucesso
+                document.getElementById("confirmationMessage").style.display =
+                  "block";
+                // Limpa o formulário após o envio
+                document.getElementById("orcamentoForm").reset();
+              } else {
+                alert("Houve um erro ao enviar os dados. Tente novamente.");
+              }
+            })
+            .catch((error) => {
+              console.error("Erro:", error);
+              alert("Erro ao enviar os dados. Tente novamente.");
+            });
+        });
+    </script>
+  </body>
+</html>

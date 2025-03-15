@@ -1,0 +1,211 @@
+/* Resetando os estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.primeira{
+    background-color: #e4dbcf;
+    border: 4px solid #e6e2de; /* Cor e espessura da borda */
+    padding: 50px; /* Espaçamento interno da caixa */
+    display: inline-block; /* Faz a caixa se ajustar ao tamanho do conteúdo */
+
+}
+
+.segunda {
+    border: 100px solid  #e4dbcf;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(243, 241, 238, 0.4); /* Usando rgba para transparência */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 50px 120px 0px 0px;
+    
+}
+
+/* Logo */
+.logo {
+    text-align: center; /* Centraliza a imagem */
+    margin-bottom: 20px; /* Espaçamento abaixo do logo */
+}
+
+.logo-img {
+    max-width: 150px; /* Tamanho máximo para a logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Formulário */
+.form-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Estilo dos campos de input e select */
+.inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input, select {
+    font-style: Poppins ExtraLight;
+    font-weight: bolder;
+    background-color: rgba(243, 241, 238, 0.4); /* Usando rgba para transparência */
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid black;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Botão de envio */
+.submit-btn {
+    border: 1px solid black;
+    background-color: #e4dbcf;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 45%;
+}
+
+.submit-btn:hover {
+    background-color: #ccd0d3;
+}
+
+/* Mudando a cor do placeholder */
+input::placeholder, textarea::placeholder {
+    font-weight: bolder;
+    color: black; /* Altere para a cor desejada */
+    font-style: Poppins ExtraLight;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #e4dbcf;
+}
+
+/* Estilos para os ícones sociais */
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Altere para a cor que preferir */
+}
+
+/* Logo da loja */
+.logo-img {
+    margin-top: 40px;
+    max-width: 150px; /* Ajuste o tamanho do logo */
+    height: auto;
+}
+.logo {
+    height: 120px;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: #e4dbcf;
+}
+
+
+/* Responsividade para telas pequenas, incluindo tablets e dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajuste do container para dispositivos menores */
+    .container {
+        width: 100%; /* Ocupa toda a largura da tela */
+        padding: 5px; /* Menos padding em telas menores */
+        display: flex;
+        flex-wrap: wrap; /* Faz com que os itens dentro do container se ajustem para várias linhas, se necessário */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    /* Tamanho do título do formulário */
+    .form-container h2 {
+        font-size: 1.1rem; /* Reduz o tamanho do título para ser mais compacto */
+        width: 100%; /* Certifica-se que o título ocupe toda a largura disponível */
+    }
+
+    /* Ajuste do tamanho do logo */
+    .logo-img {
+        margin-top: 40px;
+        height: 60px;
+        max-width: 100px; /* Logo menor em telas pequenas */
+        width: 100%; /* Garante que o logo ocupe toda a largura disponível, ajustando conforme o espaço */
+    }
+    .logo {
+        height: 120px;
+    }
+  
+
+    /* Ajustes para inputs e selects */
+    input, select {
+        font-size: 1.1rem; /* Aumenta o tamanho da fonte dos inputs */
+        padding: 15px; /* Aumenta o padding para deixar os inputs mais largos e confortáveis */
+        width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+        margin-bottom: 20px; /* Aumenta o espaço entre os campos */
+        box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    }
+
+    /* Estilo do botão de envio */
+    .submit-btn {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte do botão para um texto mais compacto */
+        padding: 12px 20px; /* Aumenta o padding para melhorar a aparência do botão */
+        width: 100%; /* O botão ocupa toda a largura disponível */
+    }
+
+    /* Estilo específico para o texto do botão 'Solicitar Orçamento' */
+    .submit-btn {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte do botão */
+        font-weight: normal; /* Deixa o texto mais leve */
+    }
+}
