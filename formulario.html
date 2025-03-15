@@ -29,11 +29,48 @@
               action="https://script.google.com/macros/s/AKfycby65-G9Fn94AShdLyGI83EfiEsOECgOPaLbjZkdqN2zNWmW_VgnOowu_YBcYHpC998p/exec"
               name="contact.form"
             >
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                placeholder="Nome:"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="contacto"
+                name="contacto"
+                required
+                placeholder="Contacto:"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Email:"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="localidade"
+                name="localidade"
+                required
+                placeholder="Localidade:"
+              />
+            </div>
               <div class="inputs-wrapper">
                 <div class="form-group">
                   <label for="tipo-confecao">Tipo de Confecção:</label>
                   <select id="tipo-confecao" name="Tipo de Confecção:" required>
-                    <option value="onda">----</option>
+                    <option value="onda">Selecione o tipo de confecção</option>
                     <option value="onda">Onda</option>
                     <option value="franzido">Franzido</option>
                     <option value="moderno">Moderno</option>
@@ -41,6 +78,18 @@
                     <option value="nao-está-aqui">Não está aqui</option>
                   </select>
                 </div>
+                <div class="inputs-wrapper">
+                  <div class="form-group">
+                    <label for="tipo-confecao">Tipo de Material:</label>
+                    <select id="tipo-confecao" name="Tipo de Material:" required>
+                      <option value="onda">Selecione o tipo de Material</option>
+                      <option value="onda">Materia 1 </option>
+                      <option value="franzido">Materia 2</option>
+                      <option value="moderno">Materia 3</option>
+                      <option value="pregas">Materia 4</option>
+                      <option value="nao-está-aqui">Materia 5</option>
+                    </select>
+                  </div>
 
                 <div class="form-group">
                   <input
@@ -49,36 +98,6 @@
                     name="medidas"
                     required
                     placeholder="Medidas:"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    placeholder="Nome:"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="localidade"
-                    name="localidade"
-                    required
-                    placeholder="Localidade:"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <input
-                    type="tel"
-                    id="contacto"
-                    name="contacto"
-                    required
-                    placeholder="Contacto:"
                   />
                 </div>
               </div>
@@ -105,7 +124,7 @@
        <!-- Adicionando os ícones sociais e o logo da loja no final -->
        <!-- Logo da loja -->
        <div class="logo">
-        <img src="3.png" alt="Logo Lucia Decor" class="logo-img" />
+        <img src="logoloja.png" alt="Logo Lucia Decor" class="logo-img" />
       </div>
     <footer class="footer">
       <div class="social-icons">
