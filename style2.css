@@ -18,15 +18,12 @@ body {
 
 /* Primeira seção */
 .primeira {
+    margin-top: 0px;
+    padding: 100px;
+    padding-bottom: 0px;
     background-color: #e4dbcf;
     border: 4px solid #e6e2de; /* Cor e espessura da borda */
-    padding: 25px; /* Espaçamento interno da caixa */
     display: inline-block; /* Faz a caixa se ajustar ao tamanho do conteúdo */
-}
-
-/* Segunda seção */
-.segunda {
-    border: 100px solid  #e4dbcf;
 }
 
 /* Container principal */
@@ -52,7 +49,8 @@ body {
 
 /* Formulário */
 .form-container {
-    padding: 20px;
+    margin-top: 0px;
+    padding: 100px;
     text-align: center;
 }
 
@@ -117,13 +115,13 @@ input, select {
 
 /* Mudando a cor do placeholder */
 input::placeholder, textarea::placeholder {
-    font-weight: bolder;
-    color: black; /* Altere para a cor desejada */
+    color: rgb(185, 179, 179); /* Altere para a cor desejada */
     font-family: "Poppins", sans-serif;
 }
 
 /* Estilos para o rodapé */
 .footer {
+    width: 100%;
     text-align: center;
     padding: 5px;
     background-color: #e4dbcf;
@@ -137,7 +135,7 @@ input::placeholder, textarea::placeholder {
 .social-icons a {
     font-size: 30px;
     color: #333;
-    margin: 0 10px;
+    margin: 0 3px;
     text-decoration: none;
 }
 
@@ -178,6 +176,14 @@ html, body {
     }
 
     /* Tamanho do título do formulário */
+
+    .form-container {
+        margin-top: 50px;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-bottom: 100px;
+        width: 500px;
+      }
     .form-container h2 {
         font-size: 1.2rem; /* Tamanho moderado para títulos em tablets */
         text-align: center; /* Centraliza o título */
@@ -226,7 +232,13 @@ html, body {
         align-items: center; /* Centraliza os itens horizontalmente */
         gap: 15px; /* Ajusta o espaçamento entre os itens */
     }
-
+    .form-container {
+        margin-top: 50px;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-bottom: 100px;
+        width: 500px;
+      }
     .form-container h2 {
         font-size: 1.1rem; /* Reduz o tamanho do título */
         text-align: center; /* Centraliza o título */
@@ -265,7 +277,7 @@ html, body {
 }
 
 /* Responsividade para smartphones muito pequenos (exemplo: dispositivos de 320px até 480px) */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .container {
         width: 100%; /* Ocupa toda a largura da tela */
         padding: 8px; /* Ajuste de padding para telas menores */
@@ -274,6 +286,13 @@ html, body {
         align-items: center;
         gap: 10px; /* Menos espaçamento entre os itens */
     }
+    .form-container {
+        margin-top: 50px;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-bottom: 100px;
+        width: 500px;
+      }
 
     .form-container h2 {
         font-size: 1rem; /* Tamanho do título ainda menor para smartphones */
