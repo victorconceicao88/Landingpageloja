@@ -138,7 +138,7 @@ header {
 
 /* Estilo para os ícones sociais */
 .social-icons {
-    margin-top: 0px;
+
     width: 100%;
     background-color: #e4dbcf;
     display: flex; /* Alinha os ícones na horizontal */
@@ -213,7 +213,7 @@ header {
         width: 100%;
         flex-direction: row; /* Organiza os ícones em uma linha */
         gap: 20px; /* Espaço entre os ícones */
-        margin-top: 20px;
+     
     }
     .borderdentro {
         font-size: 10px;
@@ -259,7 +259,7 @@ header {
         width: 100%;
         flex-direction: row; /* Organiza os ícones em uma linha */
         gap: 20px; /* Espaço entre os ícones */
-        margin-top: 20px;
+  
     }
     .borderdentro {
         font-size: 10px;
