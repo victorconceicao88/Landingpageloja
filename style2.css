@@ -5,329 +5,265 @@
     box-sizing: border-box;
 }
 
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* Corpo da página */
 body {
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center; /* Centralizando na vertical */
     flex-direction: column;
+    padding: 20px 0;
+    min-height: 100vh; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 45px;
+
 }
 
-/* Primeira seção */
+/* Primeira seção (o formulário) */
 .primeira {
-    margin-top: 0px;
-    padding: 100px;
-    padding-bottom: 0px;
-    background-color: #e4dbcf;
-    border: 4px solid #e6e2de; /* Cor e espessura da borda */
-    display: inline-block; /* Faz a caixa se ajustar ao tamanho do conteúdo */
-}
-
-/* Container principal */
-.container {
+    border: 5px solid rgba(241, 230, 216, 0.9); /* Cor da borda */
     width: 100%;
-    padding: 10px;
-    background-color: rgba(243, 241, 238, 0.4); /* Usando rgba para transparência */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    margin: 50px 120px 0px 0px ;
-}
-
-/* Logo */
-.logo {
-    text-align: center; /* Centraliza a imagem */
-    margin-bottom: 20px; /* Espaçamento abaixo do logo */
-}
-
-.logo-img {
-    max-width: 150px; /* Tamanho máximo para a logo */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Formulário */
-.form-container {
-    margin-top: 0px;
-    padding: 100px;
-    text-align: center;
-}
-
-.titulo {
-    margin-bottom: 20px;
-    color: black;
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-/* Estilo dos campos de input e select */
-.inputs-wrapper {
+    max-width: 600px;
+    padding: 20px 40px; /* Ajustando o padding: 20px para o topo e 40px para as laterais */
+    background-color: #e4dbcf;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+    align-items: center; /* Centralizando os filhos dentro da div */
 }
 
+
+/* Container do formulário */
+.divformulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(241, 230, 216, 0.9); /* Cor #e4dbcf com 80% de opacidade */
+    padding: 30px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px); /* Adiciona um desfoque atrás do fundo */
+}
+
+
+
+/* Título do Formulário */
+.titulo {
+    text-align: center;
+    color: black;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+
+
+/* Campos de entrada */
 .form-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 label {
-    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     margin-bottom: 5px;
     color: black;
 }
 
 input, select {
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: bolder;
-    background-color: rgba(243, 241, 238, 0.4); /* Usando rgba para transparência */
-    width: 100%;
-    padding: 12px;
+    padding: 10px;
     font-size: 1rem;
-    border: 1px solid black;
-    outline: none;
-    transition: border-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 /* Botão de envio */
 .submit-btn {
-    margin-left: 100px;
-    border: 1px solid black;
-    background-color: #e4dbcf;
-    color: black;
-    padding: 15px 30px;
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
     font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 50%;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #ccd0d3;
+    background-color: #45a049;
 }
 
-/* Mudando a cor do placeholder */
-input::placeholder, textarea::placeholder {
-    color: rgb(185, 179, 179); /* Altere para a cor desejada */
-    font-family: "Poppins", sans-serif;
-}
-
-/* Estilos para o rodapé */
-.footer {
-    width: 100%;
+/* Mensagem de Sucesso */
+#confirmationMessage {
     text-align: center;
-    padding: 5px;
-    background-color: #e4dbcf;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: black;
 }
 
-/* Estilos para os ícones sociais */
-.social-icons {
-    margin-bottom: 20px;
+/* Estilo para a bolinha giratória (spinner) */
+.spinner {
+    border: 4px solid rgba(73, 50, 50, 0.3); /* Cor do fundo da bolinha */
+    border-top: 4px solid #161615; /* Cor da parte superior da bolinha */
+    border-radius: 50%; /* Tornando a bolinha redonda */
+    width: 40px; /* Tamanho da bolinha */
+    height: 40px; /* Tamanho da bolinha */
+    animation: spin 2s linear infinite; /* Animação para girar a bolinha */
+    margin: 0 auto; /* Centralizando a bolinha */
+  }
+  
+  /* Definindo a animação de rotação */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Começa com a bolinha na posição inicial */
+    }
+    100% {
+      transform: rotate(360deg); /* Roda 360 graus */
+    }
+  }
+  
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.social-icons a {
-    font-size: 30px;
-    color: #333;
-    margin: 0 3px;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #007bff; /* Altere para a cor que preferir */
-}
-
-/* Logo da loja */
 .logo-img {
-    margin-top: 40px;
-    max-width: 150px; /* Ajuste o tamanho do logo */
+    max-width: 150px;
     height: auto;
 }
 
-.logo {
-    height: 120px;
-    margin-bottom: 0px;
-    width: 100%;
-    background-color: #e4dbcf;
+/* Ícones Sociais */
+.footer .social-icons {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Evitando rolagem horizontal */
-html, body {
-    overflow-x: hidden; /* Remove a rolagem horizontal */
-    width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
 }
 
-/* Responsividade para todos os tipos de dispositivos móveis */
-@media (max-width: 1024px) { 
-    /* Para dispositivos como tablets e telas de tamanho médio */
-    .container {
-        width: 100%; /* Ocupa toda a largura da tela */
-        padding: 15px; /* Ajuste de padding para dispositivos médios */
-        display: flex;
-        flex-direction: column; /* Coloca os itens na vertical */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        gap: 20px; /* Ajusta o espaçamento entre os itens */
-    }
-
-    /* Tamanho do título do formulário */
-
-    .form-container {
-        margin-top: 50px;
-        padding-top: 100px;
-        padding-left: 100px;
-        padding-bottom: 100px;
-        width: 500px;
-      }
-    .form-container h2 {
-        font-size: 1.2rem; /* Tamanho moderado para títulos em tablets */
-        text-align: center; /* Centraliza o título */
-        width: 100%;
-    }
-
-    /* Ajuste do tamanho do logo */
-    .logo-img {
-        margin-top: 30px;
-        height: 80px;
-        max-width: 120px; /* Ajuste do logo para não ocupar muito espaço */
-        width: 100%;
-    }
-
-    .logo {
-        height: 130px; /* Ajuste o tamanho da logo */
-        width: 100%; /* Garante que o logo não ultrapasse a tela */
-    }
-
-    /* Ajustes para inputs e selects */
-    input, select {
-        font-size: 1rem; /* Ajuste de tamanho para telas menores */
-        padding: 12px; /* Ajuste no padding para melhorar a aparência */
-        width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
-        margin-bottom: 20px; /* Mais espaço entre os campos */
-        box-sizing: border-box; /* Garante que o padding não quebre o layout */
-    }
-
-    /* Estilo do botão de envio */
-    .submit-btn {
-        font-size: 1.1rem; /* Tamanho de fonte mais adequado */
-        padding: 15px 25px; /* Ajuste no padding */
-        width: 80%; /* O botão ocupa 80% da largura da tela */
-        margin: 0 auto; /* Centraliza o botão */
-        display: block;
-    }
+.footer .social-icons a:hover {
+    color: #4CAF50;
 }
 
-/* Responsividade para dispositivos móveis de tamanho pequeno (smartphones) */
-@media (max-width: 768px) {
-    .container {
-        width: 100%; /* Ocupa toda a largura da tela */
-        padding: 10px; /* Reduz o padding para dispositivos móveis menores */
-        display: flex;
-        flex-direction: column; /* Coloca os itens na vertical */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        gap: 15px; /* Ajusta o espaçamento entre os itens */
-    }
-    .form-container {
-        margin-top: 50px;
-        padding-top: 100px;
-        padding-left: 100px;
-        padding-bottom: 100px;
-        width: 500px;
-      }
-    .form-container h2 {
-        font-size: 1.1rem; /* Reduz o tamanho do título */
-        text-align: center; /* Centraliza o título */
-        width: 100%;
+/* Responsividade para telas menores (até 1024px) */
+@media (max-width: 1024px) {
+    .divformulario {
+        width: 90%; /* Ajustando a largura do formulário para 90% em telas menores */
+        margin: 0 auto; /* Centralizando o formulário */
     }
 
-    .logo-img {
-        margin-top: 20px;
-        height: 60px;
-        max-width: 100px; /* Logo menor para dispositivos móveis */
-        width: 100%;
+    .primeira {
+        width: 100%; /* A largura da primeira seção é 100% */
+        padding: 20px;
     }
 
-    .logo {
-        height: 120px; /* Ajuste o tamanho do logo */
-        width: 100%; /* Garante que o logo se ajuste corretamente */
+    .body {
+        margin-top: 45px;
+        padding: 0 20px; /* Adicionando padding para não ficar muito próximo das bordas */
     }
 
-    /* Ajustes para inputs e selects */
-    input, select {
-        font-size: 1rem; /* Ajuste de tamanho para telas menores */
-        padding: 12px; /* Padding confortável */
-        width: 100%; /* Garante que os campos ocupem toda a largura disponível */
-        margin-bottom: 20px; /* Mais espaço entre os campos */
-        box-sizing: border-box; /* Garante que o padding não quebre o layout */
-    }
-
-    /* Estilo do botão de envio */
-    .submit-btn {
-        font-size: 1rem; /* Tamanho de fonte adequado */
-        padding: 12px 20px; /* Ajuste no padding para botões */
-        width: 90%; /* O botão ocupa 90% da largura da tela */
-        margin: 0 auto; /* Centraliza o botão */
-        display: block; /* Faz com que o botão se comporte como um bloco */
-    }
-}
-
-/* Responsividade para smartphones muito pequenos (exemplo: dispositivos de 320px até 480px) */
-@media (max-width: 360px) {
-    .container {
-        width: 100%; /* Ocupa toda a largura da tela */
-        padding: 8px; /* Ajuste de padding para telas menores */
+    .form-group {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Menos espaçamento entre os itens */
+        margin-bottom: 20px;
+        width: 100%; /* Largura 100% para garantir que o campo ocupe toda a tela */
     }
-    .form-container {
-        margin-top: 50px;
-        padding-top: 100px;
-        padding-left: 100px;
-        padding-bottom: 100px;
-        width: 500px;
-      }
 
-    .form-container h2 {
-        font-size: 1rem; /* Tamanho do título ainda menor para smartphones */
-        text-align: center;
-        width: 100%;
+    input, select, textarea {
+        width: 100%; /* Garantir que todos os campos de input, select e textarea ocupem 100% da largura */
+        padding: 10px;
+        box-sizing: border-box; /* Incluir padding no cálculo da largura */
+    }
+}
+
+/* Responsividade para telas de até 768px */
+@media (max-width: 768px) {
+    .divformulario {
+        width: 90%; /* Ajustando o formulário para 90% da largura */
+        margin: 0 auto;
+    }
+
+    .body {
+        margin-top: 100px;
+        padding: 0 15px; /* Adicionando padding lateral para que o conteúdo não fique colado nas bordas */
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+        padding: 12px;
+        width: 100%; /* Botão de envio com 100% de largura */
     }
 
     .logo-img {
-        margin-top: 15px;
-        height: 50px;
-        max-width: 80px; /* Logo ainda menor */
-        width: 100%; /* Garante que a logo não ultrapasse a tela */
+        max-width: 120px;
     }
 
-    .logo {
-        height: 100px; /* Ajusta o tamanho da logo para caber melhor */
-        width: 100%; /* Garante a largura do logo */
+    .footer .social-icons a {
+        font-size: 1.4rem;
     }
 
-    /* Ajustes para inputs e selects */
-    input, select {
-        font-size: 0.9rem; /* Tamanho de fonte adequado para telas pequenas */
-        padding: 10px; /* Ajuste o padding */
-        width: 100%; /* Garante que os campos ocupem toda a largura disponível */
-        margin-bottom: 15px; /* Ajuste o espaçamento entre os campos */
-        box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    input, select, textarea {
+        width: 100%; /* Garantindo que os campos de formulário ocupem toda a largura disponível */
+    }
+}
+
+@media (max-width: 430px) {
+    .body {
+        padding-top: 45px; /* Garantindo que a parte superior do corpo tenha padding de 45px */
+        margin-top: 40px;  /* Ajustando a margem superior para 40px */
+    }
+}
+
+/* Responsividade para telas de até 360px */
+@media (max-width: 360px) {
+    /* Ajustes para smartphones com largura de tela muito pequena */
+    .body {
+        margin: 10px; /* Ajustando a margem */
+        padding: 10px;
+        margin-top: 105px;
+        padding-top: 105px;
+        padding-top: 45px  
     }
 
-    /* Estilo do botão de envio */
+    .divformulario {
+        width: 100%; /* Garantindo que o formulário ocupe toda a largura */
+        padding: 10px; /* Ajuste no padding para não ficar muito afastado */
+    }
+
     .submit-btn {
-        font-size: 0.9rem; /* Menor tamanho de fonte */
-        padding: 10px 15px; /* Ajuste no padding */
-        width: 90%; /* O botão ocupa 90% da largura da tela */
-        margin: 0 auto; /* Centraliza o botão */
-        display: block;
+        font-size: 1rem;
+        padding: 12px;
+        width: 100%; /* Botão ocupa toda a largura disponível */
+    }
+
+    .logo-img {
+        max-width: 80px; /* Reduzindo o tamanho do logo */
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem; /* Ajustando os ícones para um tamanho mais compacto */
+        margin: 0 8px; /* Reduzindo o espaço entre os ícones */
+    }
+
+    input, select, textarea {
+        width: 100%; /* Garantindo que os campos de input, select e textarea ocupem 100% da largura */
+        padding: 10px; /* Padding para dar espaço nos campos */
     }
 }
 

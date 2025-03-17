@@ -5,178 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style2.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hero&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Hero&display=swap" rel="stylesheet" />
     <title>Lucia Decor - Cortinados Sob Medida</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="segunda">
-      <div class="primeira">
-        <div class="container">
-          <!-- Logo centralizado no formulário -->
-          <div class="form-container">
-            <h2 class="titulo">Solicite o Seu Orçamento:</h2>
-            <form
-              id="orcamentoForm"
-              method="post"
-              action="https://script.google.com/macros/s/AKfycby65-G9Fn94AShdLyGI83EfiEsOECgOPaLbjZkdqN2zNWmW_VgnOowu_YBcYHpC998p/exec"
-              name="contact.form"
-            >
+    <div class="primeira">
+      <div class="divformulario">
+        <h2 class="titulo">Solicite o Seu Orçamento:</h2>
+        <form id="orcamentoForm" method="post" action="https://script.google.com/macros/s/AKfycby65-G9Fn94AShdLyGI83EfiEsOECgOPaLbjZkdqN2zNWmW_VgnOowu_YBcYHpC998p/exec" name="contact.form">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="contacto">Contacto:</label>
+            <input type="tel" id="contacto" name="contacto" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="localidade">Localidade:</label>
+            <input type="text" id="localidade" name="localidade" required />
+          </div>
+
+          <div class="inputs-wrapper">
+            <div class="form-group">
+              <label for="tipo-confecao">Tipo de Confecção:</label>
+              <select id="tipo-confecao" name="Tipo de Confecção:" required>
+                <option value="onda">Selecione a confecção</option>
+                <option value="onda">Onda</option>
+                <option value="franzido">Franzido</option>
+                <option value="moderno">Moderno</option>
+                <option value="pregas">Pregas</option>
+                <option value="nao-está-aqui">Não está aqui</option>
+              </select>
+            </div>
 
             <div class="form-group">
-              <label for="tipo-confecao">Nome:</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                required
-          
-              />
+              <label for="tipo-material">Tipo de Material:</label>
+              <select id="tipo-material" name="Tipo de Material:" required>
+                <option value="material1">Selecione o Material</option>
+                <option value="material1">Material 1</option>
+                <option value="material2">Material 2</option>
+                <option value="material3">Material 3</option>
+                <option value="material4">Material 4</option>
+                <option value="material5">Material 5</option>
+              </select>
             </div>
-            <div class="form-group">
-              <label for="tipo-confecao">Contacto:</label>
-              <input
-                type="tel"
-                id="contacto"
-                name="contacto"
-                required
-       
-              />
-            </div>
-            <div class="form-group">
-              <label for="tipo-confecao">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-          
-              />
-            </div>
-            <div class="form-group">
-              <label for="tipo-confecao">Localidade:</label>
-              <input
-                type="text"
-                id="localidade"
-                name="localidade"
-                required
-            
-              />
-            </div>
-              <div class="inputs-wrapper">
-                <div class="form-group">
-                  <label for="tipo-confecao">Tipo de Confecção:</label>
-                  <select id="tipo-confecao" name="Tipo de Confecção:" required>
-                    <option value="onda">Selecione a confecção</option>
-                    <option value="onda">Onda</option>
-                    <option value="franzido">Franzido</option>
-                    <option value="moderno">Moderno</option>
-                    <option value="pregas">Pregas</option>
-                    <option value="nao-está-aqui">Não está aqui</option>
-                  </select>
-                </div>
-                <div class="inputs-wrapper">
-                  <div class="form-group">
-                    <label for="tipo-confecao">Tipo de Material:</label>
-                    <select id="tipo-confecao" name="Tipo de Material:" required>
-                      <option value="onda">Selecione o Material</option>
-                      <option value="onda">Material 1 </option>
-                      <option value="franzido">Material 2</option>
-                      <option value="moderno">Material 3</option>
-                      <option value="pregas">Material 4</option>
-                      <option value="nao-está-aqui">Material 5</option>
-                    </select>
-                  </div>
 
-                <div class="form-group">
-                  <label for="tipo-confecao">Medidas:</label>
-                  <input
-                    type="text"
-                    id="medidas"
-                    name="medidas"
-                    required
-                    placeholder="Altura e comprimento (CM)"
-                
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="submit-btn">Enviar</button>
-            </form>
-            <!-- Div para exibir a mensagem de sucesso -->
-            <div
-              id="confirmationMessage"
-              style="
-                display: none;
-                background-color: lightgreen;
-                color: black;
-                padding: 15px;
-                margin-top: 20px;
-                border-radius: 5px;
-              "
-            >
-              Dados enviados com sucesso! Entraremos em contacto em breve.
+            <div class="form-group">
+              <label for="medidas">Medidas:</label>
+              <input type="text" id="medidas" name="medidas" required placeholder="Altura e comprimento (CM)" />
             </div>
           </div>
-        </div>
+
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
       </div>
-       <!-- Adicionando os ícones sociais e o logo da loja no final -->
-       <!-- Logo da loja -->
-      <div class="logo">
-        <img src="logoloja.png" alt="Logo Lucia Decor" class="logo-img" />
+
+      <!-- Mensagem de confirmação -->
+      <div id="confirmationMessage" style="display: none; background-color: lightgreen; color: black; padding: 15px; margin-top: 20px; border-radius: 5px;">
+        Dados enviados com sucesso! Entraremos em contacto em breve.
       </div>
-      <footer class="footer">
-      <div class="social-icons">
-        <a href="https://www.instagram.com/luciadecorofficial?igsh=amc4emNvMHZyZmJk" target="_blank">
-            <img src="instagram (1).svg" alt="">
-        </a>
-        <a href="https://www.facebook.com/share/1ABLo3bLiM/?mibextid=wwXIfr" target="_blank">
-            <img src="facebook.svg" alt="">
-        </a>
-      </div>
-   
-      </footer>
+
+      <!-- A bolinha giratória que aparece enquanto o formulário é enviado -->
+      <div id="spinner" style="display: none;" class="spinner"></div>
     </div>
 
-    <!-- Inclusão do código JavaScript -->
+    <!-- Logo da loja -->
+    <div class="logo">
+      <img src="logoloja.png" alt="Logo Lucia Decor" class="logo-img" />
+    </div>
+
+    <!-- Ícones sociais -->
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/luciadecorofficial?igsh=amc4emNvMHZyZmJk" target="_blank">
+          <img src="instagram (1).svg" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/share/1ABLo3bLiM/?mibextid=wwXIfr" target="_blank">
+          <img src="facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-      document
-        .getElementById("orcamentoForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault(); // Previne o envio padrão do formulário para capturar a resposta
+      document.getElementById("orcamentoForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          const formData = new FormData(this); // Captura os dados do formulário
-          fetch(this.action, {
-            method: "POST",
-            body: formData,
+        // Mostrar a bolinha giratória
+        document.getElementById("spinner").style.display = "block";
+        document.getElementById("confirmationMessage").style.display = "none"; // Esconder a mensagem de confirmação ao enviar o formulário
 
-
-
+        const formData = new FormData(this);
+        fetch(this.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.result === "Success") {
+              // Mostrar a mensagem de confirmação de sucesso
+              document.getElementById("confirmationMessage").style.display = "block";
+              // Esconder a bolinha giratória
+              document.getElementById("spinner").style.display = "none";
+              document.getElementById("orcamentoForm").reset(); // Resetar o formulário
+            } else {
+              alert("Houve um erro ao enviar os dados. Tente novamente.");
+            }
           })
-            .then((response) => response.json()) // Processa a resposta como JSON
-            .then((data) => {
-              if (data.result === "Success") {
-                // Exibe a mensagem de sucesso
-                document.getElementById("confirmationMessage").style.display =
-                  "block";
-                // Limpa o formulário após o envio
-                document.getElementById("orcamentoForm").reset();
-              } else {
-                alert("Houve um erro ao enviar os dados. Tente novamente.");
-              }
-            })
-            .catch((error) => {
-              console.error("Erro:", error);
-              alert("Erro ao enviar os dados. Tente novamente.");
-            });
-        });
+          .catch((error) => {
+            console.error("Erro:", error);
+            alert("Erro ao enviar os dados. Tente novamente.");
+            // Esconder a bolinha giratória em caso de erro
+            document.getElementById("spinner").style.display = "none";
+          });
+      });
     </script>
   </body>
 </html>
