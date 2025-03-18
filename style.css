@@ -124,7 +124,7 @@ header {
 /* Estilo para o link do site */
 .site-link {
     font-size: 16px;
-    color: #007bff;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -132,6 +132,53 @@ header {
 
 .site-link:hover {
     color: #0056b3;
+}
+
+@media (max-width: 2500px) {
+    .paragrafo{
+        margin: 0px;
+    }
+
+    .custom-text {
+        margin: 0px;
+    }
+}
+
+
+@media (max-width: 1700px) {
+    .paragrafo{
+        margin: 0px;
+    }
+
+    .custom-text {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 1255px) {
+    /* Define o background para a imagem de 749x397 */
+    .image-container {
+        background-image: url('fototeste.jpg');
+        background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+        background-position: center; /* Centraliza a imagem de fundo */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        height: 100vh; /* Garante que a altura da área da imagem ocupe toda a altura da tela */
+    }
+
+    .main-image {
+        display: none; /* Esconde a imagem principal quando a background-image for utilizada */
+    }
+}
+
+@media (max-width: 1254px) {
+    /* Para telas menores que 1255px, mantém a imagem original */
+    .image-container {
+        background-image: none; /* Remove o background */
+    }
+
+    .main-image {
+        display: block; /* Exibe a imagem original */
+    }
 }
 
 
@@ -145,6 +192,13 @@ header {
         left: 50%;
         transform: translateX(-50%); /* Centraliza horizontalmente */
         width: 100%; /* Garantir que ocupe toda a largura disponível */
+    }
+    .paragrafo{
+        margin: 0px;
+    }
+
+    .custom-text {
+        margin: 0px;
     }
 
     .social-icons {
