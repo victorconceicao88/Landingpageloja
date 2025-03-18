@@ -130,9 +130,6 @@ header {
     transition: color 0.3s ease;
 }
 
-.site-link:hover {
-    color: #0056b3;
-}
 
 @media (max-width: 2500px) {
     .paragrafo{
@@ -141,6 +138,14 @@ header {
 
     .custom-text {
         margin: 0px;
+    }
+
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
 }
 
@@ -152,6 +157,13 @@ header {
 
     .custom-text {
         margin: 0px;
+    }
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
 }
 
@@ -168,6 +180,14 @@ header {
     .main-image {
         display: none; /* Esconde a imagem principal quando a background-image for utilizada */
     }
+
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 }
 
 @media (max-width: 1254px) {
@@ -178,6 +198,13 @@ header {
 
     .main-image {
         display: block; /* Exibe a imagem original */
+    }
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
 }
 
@@ -223,6 +250,13 @@ header {
     .site-link:hover {
         color: #0056b3;
     }
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 }
 
 @media (max-width: 768px) {
@@ -248,6 +282,13 @@ header {
     .arrow {
         font-size: 20px;
     }
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 }
 
 @media (max-width: 360px) {
@@ -269,5 +310,12 @@ header {
 
     .arrow {
         font-size: 20px;
+    }
+    .site-link {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
 }
