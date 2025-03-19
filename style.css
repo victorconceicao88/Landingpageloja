@@ -89,6 +89,28 @@ header {
     transform: translateY(5px); /* Move a seta para baixo ao passar o mouse */
 }
 
+/* Estilos para o diferencial da empresa */
+.diferencial-text {
+    margin-top: 35px; /* Mais espaço superior para afastar o texto da área do botão */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.1rem; /* Tamanho do texto */
+    color: black; /* Cor do texto */
+    font-weight: 400;
+    max-width: 80%; /* Largura máxima do texto */
+    margin: 0 auto; /* Centraliza o bloco de texto */
+    line-height: 1.8; /* Melhor legibilidade */
+    padding: 15px; /* Maior espaçamento ao redor do texto */
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo semitransparente */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Fonte personalizada (como manuscrita/cursiva) */
+.fala-diferencial {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva */
+    font-size: 1.2rem; /* Ajuste no tamanho da fonte */
+    font-style: italic; /* Letra itálica para efeito de fala */
+}
+
 /* Ajustes para a parte de baixo da imagem (icones e link) */
 .social-section {
     display: flex;
@@ -170,7 +192,7 @@ header {
 @media (min-width: 1255px) {
     /* Define o background para a imagem de 749x397 */
     .image-container {
-        background-image: url('fototeste.jpg');
+        background-image: url('fotofundo.jpg');
         background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
         background-position: center; /* Centraliza a imagem de fundo */
         background-repeat: no-repeat; /* Impede a repetição da imagem */
@@ -288,6 +310,12 @@ header {
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
+    }
+
+    .diferencial-text {
+        margin-top: 35px;
+        font-size: 1rem; /* Reduz o tamanho da fonte em dispositivos móveis */
+        max-width: 90%; /* Aumenta a largura máxima para caber melhor na tela */
     }
 }
 
