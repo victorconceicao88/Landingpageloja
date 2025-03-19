@@ -79,7 +79,7 @@ header {
 /* Estilo para a seta */
 .arrow {
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 10px;
     transition: transform 0.3s ease;
 }

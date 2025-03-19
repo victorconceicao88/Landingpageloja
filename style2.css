@@ -21,37 +21,22 @@ body {
     flex-direction: column;
     padding: 20px 0;
     min-height: 100vh; /* Garante que a altura seja no mínimo a altura da tela */
-    margin-top: 0; /* Ajuste para evitar o espaço extra no topo */
-    margin-bottom: 0; /* Ajuste para evitar o espaço extra na parte inferior */
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-x: hidden;
 }
-
-
-/* Primeira seção (o formulário) */
-.primeira {
-    border: 5px solid rgba(241, 230, 216, 0.9); /* Cor da borda */
-    width: 100%;
-    max-width: 600px;
-    padding: 20px 40px; /* Ajustando o padding: 20px para o topo e 40px para as laterais */
-    background-color: #e4dbcf;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centralizando os filhos dentro da div */
-}
-
 
 /* Container do formulário */
 .divformulario {
+    border: 5px solid rgba(255, 255, 255, 0.938);
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    background-color: rgba(241, 230, 216, 0.9); /* Cor #e4dbcf com 80% de opacidade */
+    background-color: rgba(241, 230, 216, 0.9);
     padding: 30px;
     box-sizing: border-box;
-    backdrop-filter: blur(10px); /* Adiciona um desfoque atrás do fundo */
+    backdrop-filter: blur(10px);
 }
-
-
 
 /* Título do Formulário */
 .titulo {
@@ -59,11 +44,10 @@ body {
     color: black;
     margin-left: 20px;
     margin-bottom: 30px;
+    margin-top: 15px;
     font-size: 1.2rem;
-    white-space: nowrap; /* Impede a quebra de linha */
+    white-space: nowrap;
 }
-
-
 
 /* Campos de entrada */
 .form-group {
@@ -83,6 +67,7 @@ input, select {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
 }
 
 /* Botão de envio */
@@ -112,30 +97,30 @@ input, select {
 
 /* Estilo para a bolinha giratória (spinner) */
 .spinner {
-    border: 4px solid rgba(73, 50, 50, 0.3); /* Cor do fundo da bolinha */
-    border-top: 4px solid #161615; /* Cor da parte superior da bolinha */
-    border-radius: 50%; /* Tornando a bolinha redonda */
-    width: 40px; /* Tamanho da bolinha */
-    height: 40px; /* Tamanho da bolinha */
-    animation: spin 2s linear infinite; /* Animação para girar a bolinha */
-    margin: 0 auto; /* Centralizando a bolinha */
-  }
-  
-  /* Definindo a animação de rotação */
-  @keyframes spin {
+    border: 4px solid rgba(73, 50, 50, 0.3);
+    border-top: 4px solid #161615;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+/* Definindo a animação de rotação */
+@keyframes spin {
     0% {
-      transform: rotate(0deg); /* Começa com a bolinha na posição inicial */
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg); /* Roda 360 graus */
+        transform: rotate(360deg);
     }
-  }
-  
+}
 
 /* Logo */
 .logo {
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .logo-img {
@@ -147,6 +132,7 @@ input, select {
 .footer .social-icons {
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .footer .social-icons a {
@@ -160,173 +146,389 @@ input, select {
     color: #4CAF50;
 }
 
-/* Responsividade para telas menores (até 1024px) */
-@media (max-width: 1024px) {
+/* Estilos para a seção de Feedbacks */
+.feedback-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px; /* Um leve arredondamento para as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de Feedback */
+.feedback-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Container que vai manter os 3 feedbacks lado a lado */
+.feedback-container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os feedbacks */
+    gap: 20px; /* Adiciona um pequeno espaço entre os feedbacks */
+    flex-wrap: wrap; /* Garante que em telas menores, os feedbacks vão para a linha seguinte */
+}
+
+/* Cada Feedback */
+.feedback {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%; /* Definindo a largura dos feedbacks */
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre os feedbacks nas telas menores */
+    color: black;
+}
+
+/* Ajustando o tamanho do texto */
+.feedback p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Media Queries ajustadas para melhor responsividade */
+
+/* Para telas muito grandes (até 2000px) */
+@media (max-width: 2000px) {
     .divformulario {
-        width: 90%; /* Ajustando a largura do formulário para 90% em telas menores */
-        margin: 0 auto; /* Centralizando o formulário */
+        margin-top: 400px; /* Ajustando o margin-top */
+        width: 80%; /* Ajustando o tamanho para telas maiores */
+        max-width: 500px; /* Aumentando a largura máxima */
+        border: 5px solid rgba(255, 255, 255, 0.938);
     }
 
-    .primeira {
-        margin-top: 0px;
-        width: 100%; /* A largura da primeira seção é 100% */
-        padding: 20px;
-    }
+}
 
-    .body {
-        padding-top: 20px;
-        padding-bottom: 20px; /* Adicionando padding para não ficar muito próximo das bordas */
-    }
-
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        width: 100%; /* Largura 100% para garantir que o campo ocupe toda a tela */
-    }
-
-    input, select, textarea {
-        width: 100%; /* Garantir que todos os campos de input, select e textarea ocupem 100% da largura */
-        padding: 10px;
-        box-sizing: border-box; /* Incluir padding no cálculo da largura */
+/* Para telas grandes (max-width: 1600px) */
+@media (max-width: 1600px) {
+    .divformulario {
+        width: 85%; /* Ajuste de largura */
+        max-width: 500px; /* Ajustando a largura máxima */
+        border: 5px solid rgba(255, 255, 255, 0.938);
     }
 }
 
-/* Responsividade para telas de até 768px */
+/* Para tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .divformulario {
+        margin-top: 100px;
+        width: 90%;
+        max-width: 700px;
+        border: 5px solid rgba(255, 255, 255, 0.938);
+    }
+
+    .primeira {
+        margin-top: 15vh;
+        padding: 30px;
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    .logo-img {
+        max-width: 150px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para telas de até 768px (Tablets/Pequenos dispositivos) */
 @media (max-width: 768px) {
     .divformulario {
-        width: 90%; /* Ajustando o formulário para 90% da largura */
+        width: 90%;
         margin: 0 auto;
+        border: 5px solid rgba(255, 255, 255, 0.938);
     }
 
-    .primeira{
-        margin-top: 0px;
-    }
-
-    .body {
-        padding-top: 20px; /* Menor padding para telas de 768px */
-        padding-bottom: 20px; /* Menor padding para telas de 768px */
+    .primeira {
+        margin-top: 40vh;
+        padding: 20px;
     }
 
     .submit-btn {
         font-size: 1.1rem;
         padding: 12px;
-        width: 100%; /* Botão de envio com 100% de largura */
+        width: 100%;
     }
 
     .logo-img {
         max-width: 120px;
     }
 
-    .footer .social-icons a {
-        font-size: 1.4rem;
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 
-    input, select, textarea {
-        width: 100%; /* Garantindo que os campos de formulário ocupem toda a largura disponível */
+    .footer .social-icons a {
+        font-size: 1.5rem;
+    }
+
+    .feedback-container {
+        flex-direction: column; /* Faz os feedbacks ficarem empilhados em telas menores */
+        align-items: center; /* Centraliza os feedbacks */
+    }
+
+    .feedback {
+        width: 80%; /* Aumenta a largura dos feedbacks em telas menores */
+        margin-bottom: 40px; /* Dá espaço entre os feedbacks */
     }
 }
-@media (max-width: 360px) and (max-height: 740px) {
-    /* Ajustes para telas de 360px de largura e 740px de altura */
+
+/* Para smartphones até 480px */
+@media (max-width: 480px) {
     body {
-        margin: 0;
-        padding: 0;
-        height: 100vh; /* Garantir que o body ocupe toda a altura da tela */
-        display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
         flex-direction: column;
-        padding-top: 20px; /* Espaço superior */
-        padding-bottom: 20px; /* Espaço inferior */
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
-    /* Formulário */
     .divformulario {
-        width: 100%; /* Formulário ocupa toda a largura disponível */
+        width: 100%;
+        max-width: none;
         padding: 10px;
-        max-width: 320px; /* Limita a largura para que o formulário não ocupe toda a tela */
-        margin-top: 20px; /* Espaçamento acima do formulário */
-        box-sizing: border-box;
+        margin-top: 0px;
+        border: 5px solid rgba(255, 255, 255, 0.938);
     }
 
-    /* Botão de envio */
     .submit-btn {
         font-size: 1rem;
         padding: 12px;
-        width: 100%; /* Botão ocupa toda a largura disponível */
+        width: 100%;
     }
 
-    /* Logo */
     .logo-img {
-        max-width: 80px; /* Ajustando o tamanho do logo */
-        display: block;
-        margin-left: auto;  /* Centraliza o logo à esquerda */
-        margin-right: auto; /* Centraliza o logo à direita */
+        max-width: 80px;
     }
 
-    /* Ícones sociais */
-    .footer .social-icons {
-        display: flex;
-        justify-content: center; /* Centraliza os ícones sociais horizontalmente */
-        align-items: center; /* Alinha os ícones sociais no centro */
-        gap: 10px; /* Espaçamento entre os ícones sociais */
-        margin-top: 10px; /* Espaçamento entre os ícones sociais e o conteúdo acima */
+    .titulo {
+        font-size: 1rem;
+        margin-top: 20px;
+        padding-bottom: 20px;
+
+        
     }
 
     .footer .social-icons a {
-        font-size: 1.2rem;
-        margin: 0 5px; /* Ajustando o espaçamento entre os ícones */
+        font-size: 1.5rem;
     }
 
-    .footer .social-icons img {
-        max-width: 20px; /* Ajustando o tamanho dos ícones sociais */
-        height: auto;
-        transition: transform 0.3s ease;
-    }
-
-    .footer .social-icons img:hover {
-        transform: scale(1.1); /* Efeito de aumentar o tamanho dos ícones ao passar o mouse */
-    }
-
-    /* Campos de entrada (input, select, textarea) */
-    input, select, textarea {
-        width: 100%; /* Garantir que os campos ocupem toda a largura */
-        padding: 10px;
-        margin-bottom: 15px; /* Espaçamento entre os campos */
-        box-sizing: border-box;
-    }
-
-    /* Título */
-    .divformulario h1 {
-        font-size: 1.2rem; /* Ajuste no tamanho da fonte */
-        margin-bottom: 10px; /* Espaço abaixo do título */
-        text-align: center; /* Centraliza o título */
-    }
-
-    /* Ajustes na classe .primeira */
-    .primeira {
-        
-    margin-top: 200px;
-    border-top-width: 10px;
-    padding-top: 20px; 
-    padding-bottom: 20px; 
-    padding-left: 20px; 
-    margin-left: 20px; 
-    margin-right: 20px; 
-    border-left-width: 10px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-
-    }
-
-    .titulo{
-        
-    margin-left: 0px;
-    padding-top: 40px;
-    margin-bottom: 25px;
-
-
+    .feedback {
+        width: 90%; /* Aumenta ainda mais os feedbacks em dispositivos muito pequenos */
     }
 }
+
+/* Para smartphones até 360px */
+@media (max-width: 360px) {
+    body {
+        padding-top: 0; /* Remover o padding superior */
+        padding-bottom: 0; /* Remover o padding inferior */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Garantir que o conteúdo comece do topo */
+        align-items: center;
+        min-height: 100vh; /* Garante que o conteúdo ocupe 100% da altura da tela */
+        margin: 0; /* Garantir que não haja margem em torno do corpo */
+    }
+
+    .divformulario {
+        width: 100%; /* Garantir que ocupe toda a largura da tela */
+        max-width: 100%; /* Permitir que a div ocupe 100% da largura da tela */
+        padding: 10px;
+        margin: 0; /* Remover qualquer margem */
+        box-sizing: border-box; /* Garantir que o padding não afete a largura */
+        border: 5px solid rgba(255, 255, 255, 0.938);
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .logo-img {
+        max-width: 70px;
+    }
+
+    .titulo {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .primeira {
+        margin-top: 0; /* Remover margem superior para garantir que não haja espaçamento */
+        border-top-width: 8px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajuste para o iPad Mini e iPad Air */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        padding-top: 0px !important;  /* Remover padding-top para evitar corte no topo */
+        padding-bottom: 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Garante que o conteúdo fique no topo */
+        align-items: center;
+        min-height: 100vh; /* Garantir que a altura ocupe toda a tela */
+    }
+
+    .divformulario {
+        width: 100%;
+        max-width: 800px; /* Ajustando a largura para se ajustar melhor em dispositivos como o iPad */
+        padding: 20px;
+        margin-top: 20px; /* Garantir que não sobreponha o título */
+        box-sizing: border-box;
+        border: 5px solid rgba(255, 255, 255, 0.938);
+    }
+
+    .submit-btn {
+        font-size: 1.2rem;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .logo-img {
+        max-width: 120px;
+    }
+
+    .titulo {
+        font-size: 1.4rem; /* Tamanho maior para o título */
+        text-align: center; /* Garantir que o título fique centralizado */
+        margin-bottom: 20px; /* Margem inferior ajustada */
+    }
+
+    .primeira {
+        margin-top: 40px; /* Ajuste no margin-top da primeira seção */
+    }
+
+    .footer .social-icons a {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Ajuste para o iPhone XR (414px de largura) */
+@media (max-width: 414px) {
+    body {
+        padding-top: 10px; /* Ajuste para garantir um espaçamento adequado no topo */
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Garantir que o conteúdo comece do topo */
+        align-items: center;
+        min-height: 100vh; /* Garante que o conteúdo ocupe 100% da altura da tela */
+        margin: 0;
+    }
+
+    .divformulario {
+        width: 100%; /* Garantir que ocupe toda a largura da tela */
+        max-width: none; /* Remover restrição de largura máxima */
+        padding: 10px;
+        margin-top: 0px; /* Ajustando a margem superior */
+        box-sizing: border-box; /* Garantir que o padding não afete a largura */
+        border: 5px solid rgba(255, 255, 255, 0.938);
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .logo-img {
+        max-width: 80px;
+    }
+
+    .titulo {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .primeira {
+        margin-top: 20px; /* Ajuste para garantir que o conteúdo não fique cortado */
+        border-top-width: 8px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajuste específico para o iPhone 14 Pro Max (largura 430px) */
+@media (max-width: 430px) {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start; /* Garante que o conteúdo começa no topo */
+        align-items: center; /* Alinha o conteúdo ao centro */
+        flex-direction: column;
+        min-height: 100vh; /* Garante que o conteúdo ocupe 100% da altura da tela */
+    }
+
+    .feedback-section {
+        margin-top: 20px; /* Ajuste o margin-top para garantir que a seção não fique colada ao topo */
+        padding-bottom: 20px; /* Espaçamento para a parte inferior */
+        width: 100%;
+        box-sizing: border-box; /* Ajuste o box-sizing para garantir que o padding não afete a largura */
+    }
+
+    .feedback-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px; /* Espaçamento entre os comentários */
+        margin-top: 20px; /* Margem superior para garantir que os feedbacks não fiquem colados no topo */
+    }
+
+    .feedback {
+        width: 100%; /* Garante que os feedbacks ocupem 100% da largura disponível */
+        box-sizing: border-box;
+        padding: 15px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .feedback p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    /* Estrelas de avaliação */
+    .star-rating {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .star-rating i {
+        font-size: 1.2rem; /* Ajuste o tamanho das estrelas */
+        color: #FFD700; /* Cor dourada para as estrelas */
+    }
+}
+
+
+
+
