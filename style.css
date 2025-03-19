@@ -89,28 +89,6 @@ header {
     transform: translateY(5px); /* Move a seta para baixo ao passar o mouse */
 }
 
-/* Estilos para o diferencial da empresa */
-.diferencial-text {
-    margin-top: 35px; /* Mais espaço superior para afastar o texto da área do botão */
-    text-align: center; /* Centraliza o texto */
-    font-size: 1.1rem; /* Tamanho do texto */
-    color: black; /* Cor do texto */
-    font-weight: 400;
-    max-width: 80%; /* Largura máxima do texto */
-    margin: 0 auto; /* Centraliza o bloco de texto */
-    line-height: 1.8; /* Melhor legibilidade */
-    padding: 15px; /* Maior espaçamento ao redor do texto */
-    background-color: rgba(0, 0, 0, 0.1); /* Fundo semitransparente */
-    border-radius: 8px; /* Bordas arredondadas */
-}
-
-/* Fonte personalizada (como manuscrita/cursiva) */
-.fala-diferencial {
-    font-family: 'Dancing Script', cursive; /* Fonte cursiva */
-    font-size: 1.2rem; /* Ajuste no tamanho da fonte */
-    font-style: italic; /* Letra itálica para efeito de fala */
-}
-
 /* Ajustes para a parte de baixo da imagem (icones e link) */
 .social-section {
     display: flex;
@@ -312,11 +290,6 @@ header {
         transition: color 0.3s ease;
     }
 
-    .diferencial-text {
-        margin-top: 35px;
-        font-size: 1rem; /* Reduz o tamanho da fonte em dispositivos móveis */
-        max-width: 90%; /* Aumenta a largura máxima para caber melhor na tela */
-    }
 }
 
 @media (max-width: 360px) {
@@ -347,29 +320,4 @@ header {
         transition: color 0.3s ease;
     }
 }
-/* Ajustes específicos para iPhones 6/7/8 */
-@media (max-width: 375px) {
-    .diferencial-text {
-        margin-top: 5px;
-        font-size: 0.95rem; /* Reduz o tamanho da fonte para caber melhor na tela */
-        max-width: 85%; /* Ajusta a largura do texto */
-        padding: 10px; /* Reduz o padding para caber melhor */
-    }
 
-    .fala-diferencial {
-        font-size: 1rem; /* Ajuste do tamanho da fonte dentro do diferencial */
-    }
-}
-
-/* Ajuste para iPhones 6/7/8 Plus */
-@media (max-width: 414px) {
-    .diferencial-text {
-        margin-top: 5px;
-        font-size: 1rem; /* Ajusta o tamanho da fonte para o Plus */
-        max-width: 90%; /* Ajusta o tamanho da largura do texto */
-    }
-
-    .fala-diferencial {
-        font-size: 1.1rem; /* Ajusta a fonte para o Plus */
-    }
-}
